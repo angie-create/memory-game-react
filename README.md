@@ -33,8 +33,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [GitHub Repository](https://github.com/yourusername/memory-game-react)
-- Live Site URL: [Live Demo](https://your-live-site-url.com)
+- Solution URL: [GitHub Repository](https://github.com/angie-create/memory-game-react)
+- Live Site URL: [Live Demo](https://angie-create.github.io/memory-game-react/)
 
 ## My process
 
