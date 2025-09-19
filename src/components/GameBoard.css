@@ -1,0 +1,156 @@
+.game-board {
+  width: 100%;
+  max-width: 572px;
+  margin: 0 auto;
+}
+
+.game-board__grid {
+  display: grid;
+  gap: var(--spacing-sm);
+  margin-bottom: var(--spacing-lg);
+}
+
+.game-board__grid--4x4 {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.game-board__grid--6x6 {
+  grid-template-columns: repeat(6, 1fr);
+}
+
+/* Solo player stats */
+.game-stats {
+  display: flex;
+  gap: 80px;
+  justify-content: center;
+}
+
+.stat-card {
+  background-color: var(--color-blue-300);
+  border-radius: var(--border-radius-small);
+  padding: var(--spacing-md) var(--spacing-xl);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-width: 160px;
+}
+
+.stat-card__label {
+  font-size: 1.125rem;
+  font-weight: 700;
+  color: var(--color-blue-400);
+}
+
+.stat-card__value {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--color-blue-950);
+}
+
+/* Multiplayer stats */
+.players-stats {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--spacing-md);
+  justify-content: center;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.player-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.current-turn-indicator {
+  text-align: center;
+  font-size: 0.875rem;
+  font-weight: 700;
+  color: var(--color-blue-400);
+  letter-spacing: 0.1em;
+  margin-top: var(--spacing-sm);
+}
+
+.player-card {
+  background-color: var(--color-blue-300);
+  border-radius: var(--border-radius-small);
+  padding: var(--spacing-md) var(--spacing-lg);
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 120px;
+  position: relative;
+  transition: all 0.2s ease-in-out;
+  min-width: 160px;
+}
+
+.player-card--active {
+  background-color: var(--color-orange-400);
+}
+
+.player-card__name {
+  font-size: 1.125rem;
+  font-weight: 700;
+  color: var(--color-blue-950);
+}
+
+.player-card--active .player-card__name {
+  color: var(--color-white);
+}
+
+.player-card__score {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--color-blue-950);
+}
+
+.player-card--active .player-card__score {
+  color: var(--color-white);
+}
+
+
+@media (max-width: 768px) {
+  .game-board__grid {
+    gap: var(--spacing-xs);
+  }
+
+  .game-stats {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-sm);
+  }
+
+  .players-stats {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .stat-card,
+  .player-card {
+    padding: var(--spacing-sm);
+    gap: 60px;
+  }
+
+  .stat-card__value,
+  .player-card__score {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .game-board__grid--6x6 {
+    gap: 4px;
+  }
+
+  .players-stats {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .player-card {
+    gap: 20px;
+    flex-direction: column;
+    text-align: center;
+    min-width: 64px;
+    min-height: 70px;
+    padding: var(--spacing-sm);
+  }
+}
